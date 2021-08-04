@@ -7,6 +7,13 @@ inoremap " ""<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
+"single opening 
+inoremap "" "
+inoremap `` ` 
+inoremap '' ' 
+inoremap (( ( 
+inoremap [[ [ 
+inoremap {{ { 
 "autoclose with ; and position cursor to write text inside
 inoremap '; '';<left><left>
 inoremap `; ``;<left><left>
