@@ -9,9 +9,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
 "commentor
 Plug 'preservim/nerdcommenter'
-" colorscheme installed 
+" colorscheme installed
 Plug 'NLKNguyen/papercolor-theme'
-" coc
+"coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " All of your Plugins must be added before the following line
 call plug#end()
@@ -40,7 +40,7 @@ let g:PaperColor_Theme_Options = {
   \   },
  	\   'theme': {
   \     'default.dark': {
-  \       'transparent_background': 1 
+  \       'transparent_background': 1
   \     }
   \   }
   \ }
@@ -91,7 +91,7 @@ set smartcase
 " toggle search highlighting
 nnoremap <F3> :set hlsearch!<CR>
 " ================ File management ==================
- 
+
 " Turn off swap files
 set noswapfile
 set nobackup
@@ -101,6 +101,8 @@ set wildignore+=*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim
 set wildmenu
 set wildmode=longest:full,full
 set wildignorecase
+"ignore files
+let g:netrw_list_hide= '.*\.out$'
 " ================ Misc =============================
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -121,10 +123,10 @@ set scrolloff=8
 set updatetime=50
 " set the leader key to space
 let mapleader =","
-let g:mapleader ="," 
+let g:mapleader =","
 let loaded_matchparen = 1
 "system clipboard
-set clipboard=unnamedplus
+set clipboard=unnamedplus "using "+y register
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
 " Give more space for displaying messages.
@@ -135,7 +137,9 @@ set showcmd
 " open new split panes to right and below
 set splitright
 set splitbelow
-
+"auto indent
+"set paste "auto indent off
+"set nopaste "auto indent on
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
@@ -151,15 +155,15 @@ nnoremap <leader>d "_d
 "nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
-"use r for redo 
+"use r for redo
 nnoremap r <C-R>
 vnoremap r <C-R>
 "============External configs====================
 "auto close brackets
-source ~/.vim/config/autoclose.vim 
+source ~/.vim/config/autoclose.vim
 "keybindings
 " compile and run c++ from vim
-" for c++ flags u can refer  
+" for c++ flags u can refer
 "https://codeforces.com/blog/entry/15547
 "-DLOCAL flag is added in cpp because it defines local variable while
 "compling code locally.
